@@ -1,0 +1,743 @@
+*{
+  margin:0;
+  padding:0;
+}
+%webpage {
+  width:100%;
+  height:100%;
+}
+html,body{
+  @extend  %webpage;
+}
+.swiper-container{
+  margin:0 auto;
+  max-width:640px;
+  @extend %webpage;
+}
+$vendor: -webkit- -moz- -ms- -o-;
+@mixin addVendor($pro,$v){
+  @each $i in $vendor {
+    #{$i}#{$pro}:#{$v};
+  }
+}
+
+.swiper-slide{
+  &:after{
+    display: block;
+    content: '';
+    width:24px;
+    position:absolute;
+    height: 18px;
+    right:0px;
+    left:0px;
+    margin:0 auto;
+    bottom:.5rem;
+    background:url("../images/web-swipe-tip.png");
+    @include addVendor("animation","showUpDown 1s linear infinite");
+  }
+}
+@keyframes showUpDown {
+  from {
+    bottom:20px;
+    opacity: 1;
+  }
+  to{
+    bottom:35px;
+    opacity: 0;
+  }
+}
+.box-1 p:nth-of-type(1){
+  @extend %webpage;
+  position:absolute;
+  left:0;
+  top:0;
+
+}
+
+.music-c{
+  position:absolute;
+  display: block;
+  background:url("../images/music.png");
+  width:44px;
+  height:44px;
+  right:6%;
+  top:5%;
+  animation: cir 1s linear infinite;
+  z-index:3;
+}
+@keyframes cir {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+.music-note {
+  position:absolute;
+  background: yellow url("../images/music_c.gif");
+  display: block;
+  background-size:contain;
+  width:70px;
+  height:70px;
+  right:1%;
+  top:2%;
+ display: none;
+}
+
+img{
+  @extend %webpage;
+}
+.swiper-slide p{
+  position: absolute;
+}
+.box-1 p:nth-of-type(1){
+
+  @extend  %webpage;
+  left: 0;
+  top:0;
+}
+.box-1 p:nth-of-type(2){
+  width: 14.0625%;
+  height: 7.738095238095238%;
+  left: 3.0208396911621094%;
+  top: 51.65447356208922%;
+  z-index: 0;
+  animation: cr 100s linear infinite;
+
+}
+@keyframes cr{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+.box-1 p:nth-of-type(3){
+  width: 23.75%;
+  height: 9.126984126984127%;
+  left: 55.5208396911621%;
+  top: 19.51161641923208%;
+  z-index: 0;
+
+}
+.box-1 p:nth-of-type(4){
+  width: 46.17784711388456%;
+  height: 3.565856919991086%;
+  left: 30.111641965678626%;
+  top: 87.46378426565634%;
+  z-index: 0;
+  -webkit-animation: wobble 1s 6s 1 both;
+  -moz-animation: wobble 1s 6s 1 both;
+  animation: wobble 1s 6s 1 both;
+
+}
+.box-1 p:nth-of-type(5){
+  width: 15.600624024961002%;
+  height: 9.806106529975485%;
+  left: 11.39089313572543%;
+  top: 40.21618007577447%;
+  z-index: 0;
+  -webkit-animation: bounceInRight 1s 1.5s 1 both;
+  -moz-animation: bounceInRight 1s 1.5s 1 both;
+  animation: bounceInRight 1s 1.5s 1 both;
+}
+.box-1 p:nth-of-type(6){
+  width: 12.948517940717629%;
+  height: 11.291880246638438%;
+  left: 30.73566692667707%;
+  top: 37.34368422355942%;
+  z-index: 0;
+  -webkit-animation: bounceInRight 1s 2s 1 both;
+  -moz-animation: bounceInRight 1s 2s 1 both;
+  animation: bounceInRight 1s 2s 1 both;
+}
+.box-1 p:nth-of-type(7){
+  width: 19.34477379095164%;
+  height: 11.688086571081891%;
+  left: 47.58434087363496%;
+  top: 36.452219993561656%;
+  z-index: 0;
+  -webkit-animation: bounceInRight 1s 2.5s 1 both,float2 3s 7s infinite forwards;
+  -moz-animation: bounceInRight 1s 2.5s 1 both,float2 3s 7s infinite forwards;
+  animation: bounceInRight 1s 2.5s 1 both,float2 3s 7s infinite forwards;
+}
+.box-1 p:nth-of-type(8){
+  width: 12.012480499219972%;
+  height: 10.103261273308076%;
+  left: 70.51725819032761%;
+  top: 40.71143798132878%;
+  z-index: 0;
+  -webkit-animation: bounceInRight 1s 3s 1 both,float2 3s 7s infinite forwards;
+  -moz-animation: bounceInRight 1s 3s 1 both,float2 3s 7s infinite forwards;
+  animation: bounceInRight 1s 3s 1 both,float2 3s 7s infinite forwards;
+}
+.box-1 p:nth-of-type(9){
+  width: 3.43213728549142%;
+  height: 3.6649085011019498%;
+  left: 85.33785101404057%;
+  top: 46.65453284798059%;
+  z-index: 0;
+}
+.box-1 p:nth-of-type(10){
+  width: 17.31669266770671%;
+  height: 9.806106529975485%;
+  left: 19.34721138845554%;
+  top: 55.8663298912909%;
+  z-index: 0;
+}
+.box-1 p:nth-of-type(11){
+  width: 16.380655226209047%;
+  height: 11.09377708441671%;
+  left: 39.628022620904844%;
+  top: 53.489091944630175%;
+  z-index: 0;
+}
+.box-1 p:nth-of-type(12){
+  width: 8.424336973478939%;
+  height: 10.598519178862393%;
+  left: 59.75282761310453%;
+  top: 54.776762499071395%;
+  z-index: 0;
+}
+.box-1 p:nth-of-type(13){
+  width: 16.53666146645866%;
+  height: 11.192828665527573%;
+  left: 70.51725819032761%;
+  top: 54.87581408018226%;
+  z-index: 0;
+}
+.box-1 p:nth-of-type(14){
+  width: 78.47113884555384%;
+  height: 7.428868583314761%;
+  left: 12.950955538221528%;
+  top: 10.995963648069733%;
+  z-index: 0;
+}
+.box-1 p:nth-of-type(15){
+  width: 15.937499999999998%;
+  height: 9.722222222222223%;
+  left: 30.9375%;
+  top: 69.04761904761905%;
+  z-index: 0;
+}
+
+.box-2 p:nth-of-type(1){
+  width: 120.93750000000001%;
+  height: 100.39682539682539%;
+  left: -10.15625%;
+  top: -0.1984126984126984%;
+  z-index: 0;
+}
+.box-2 p:nth-of-type(2){
+  width: 61.875%;
+  height: 71.62698412698413%;
+  left: 20.15625%;
+  top: 14.186507936507937%;
+  z-index: 0;
+
+}
+.box-2 p:nth-of-type(3){
+  width: 4.258555133079848%;
+  height: 2.7521274669563645%;
+  left: 63.72623574144487%;
+  top: 55.31036876093911%;
+  z-index: 0;
+}
+.box-2 p:nth-of-type(4){
+  width: 4.562737642585551%;
+  height: 2.8004104049731424%;
+  left: 68.28897338403041%;
+  top: 55.21380288490555%;
+  z-index: 0;
+}
+.box-2 p:nth-of-type(5){
+  width: 25.171102661596954%;
+  height: 3.6212203512583736%;
+  left: 38.93536121673004%;
+  top: 17.939374735952683%;
+  z-index: 0;
+
+}
+.box-2 p:nth-of-type(6){
+  width: 55.057034220532316%;
+  height: 43.26151246303338%;
+  left: 24.03041825095057%;
+  top: 19.387862876456033%;
+  z-index: 0;
+
+}
+.box-2 p:nth-of-type(7){
+  width: 15.361216730038024%;
+  height: 1.496771078520128%;
+  left: 43.87832699619773%;
+  top: 61.3404550666908%;
+  z-index: 0;
+}
+.box-2 p:nth-of-type(8){
+  width: 59.08745247148289%;
+  height: 5.697386685979842%;
+  left: 21.749049429657795%;
+  top: 9.028909409137546%;
+  z-index: 0;
+
+}
+.box-2 p:nth-of-type(9){
+  width: 30.646387832699624%;
+  height: 31.335626772889132%;
+  left: 28.973384030418252%;
+  top: 24.505854306234536%;
+  z-index: 0;
+
+}
+.box-2 p:nth-of-type(10){
+  width: 10.190114068441066%;
+  height: 10.477397549640894%;
+  left: 62.661596958174904%;
+  top: 44.06044420302976%;
+  z-index: 0;
+
+}
+.box-2 p:nth-of-type(11){
+  width: 54.22053231939164%;
+  height: 13.326090892630818%;
+  left: 23.574144486692017%;
+  top: 67.6051662743678%;
+  z-index: 0;
+
+}
+.box-3 p:nth-of-type(1){
+  width: 124.6875%;
+  height: 103.57142857142858%;
+  left: -3.125%;
+  top: -0.992063492063492%;
+  z-index: 0;
+}
+.box-3 p:nth-of-type(2){
+  width: 80.3125%;
+  height: 34.523809523809526%;
+  left: 9.6875%;
+  top: 50%;
+  z-index: 0;
+
+}
+.box-3 p:nth-of-type(3){
+  width: 46.875%;
+  height: 44.047619047619044%;
+  left: 50.625%;
+  top: 10.912698412698413%;
+  z-index: 0;
+
+}
+.box-3 p:nth-of-type(4){
+  width: 46.875%;
+  height: 44.047619047619044%;
+  left: 2.1875%;
+  top: 10.912698412698413%;
+  z-index: 0;
+
+}
+.box-3 p:nth-of-type(5){
+  width: 46.17784711388456%;
+  height: 3.565856919991086%;
+  left: 30.42414196567863%;
+  top: 90.04314934502142%;
+  z-index: 0;
+}
+.box-3 p:nth-of-type(6){
+  width: 26.25%;
+  height: 15.476190476190476%;
+  left: 59.06249999999999%;
+  top: 56.94444444444444%;
+  z-index: 0;
+  animation: cri 100s linear infinite;
+}
+@keyframes cri {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+.box-3 p:nth-of-type(7){
+  width: 71.5625%;
+  height: auto;
+  left: 11.875%;
+  top: 71.42857142857143%;
+  z-index: 0;
+
+}
+.cmp-inner {
+  word-wrap: break-word;
+  word-break: break-all;
+  width:100%;
+  height:100%;
+}
+.box-3 p:nth-of-type(8){
+  width: 58.12500000000001%;
+  height: auto;
+  left: 14.0625%;
+  top: 59.92063492063492%;
+  z-index: 0;
+
+}
+.box-4 p:nth-of-type(1){
+  width: 106.5625%;
+  height: 100.39682539682539%;
+  left: -3.28125%;
+  top: -0.1984126984126984%;
+  z-index: 0;
+}
+.box-4 p:nth-of-type(2){
+  width: 85.625%;
+  height: 32.0436507936508%;
+  left: 7.5%;
+  top: 22.321428571428573%;
+  z-index: 0;
+}
+.box-4 p:nth-of-type(3){
+  width: 26.5625%;
+  height: 25%;
+  left: 37.5%;
+  top: 63.78968253968254%;
+  z-index: 0;
+
+}
+.box-4 p:nth-of-type(4){
+  width: 26.5625%;
+  height: 25%;
+  left: 52.5%;
+  top: 35.81349206349206%;
+  z-index: 0;
+
+}
+.box-4 p:nth-of-type(5){
+  width: 26.5625%;
+  height: 25%;
+  left: 21.40625%;
+  top: 35.81349206349206%;
+  z-index: 0;
+
+}
+.box-4 p:nth-of-type(6){
+  width: 25.3125%;
+  height: 2.083333333333333%;
+  left: 75.15625%;
+  top: 27.384052579365083%;
+  z-index: 0;
+
+}
+.box-4 p:nth-of-type(7){
+  width: 24.6875%;
+  height: 2.083333333333333%;
+  left: 0%;
+  top: 27.384052579365083%;
+  z-index: 0;
+
+}
+.box-4 p:nth-of-type(8){
+  width: 46.17784711388456%;
+  height: 3.565856919991086%;
+  left: 26.875%;
+  top: 26.689608134920633%;
+  z-index: 0;
+
+}
+.box-4 p:nth-of-type(9){
+  width: 58.12500000000001%;
+  height: auto;
+  left: 22.5%;
+  top: 31.051587301587304%;
+  z-index: 0;
+
+}
+.box-5 p:nth-of-type(1){
+  width: 107.5%;
+  height: 101.19047619047619%;
+  left: -5.78125%;
+  top: -0.5952380952380952%;
+  z-index: 0;
+
+}
+.box-5 p:nth-of-type(2){
+  width: 87.65625%;
+  height: 55.55555555555556%;
+  left: 6.09375%;
+  top: 22.51984126984127%;
+  z-index: 0;
+
+}
+.box-5 p:nth-of-type(3){
+  width: 77.03125%;
+  height: 48.90873015873016%;
+  left: 11.5625%;
+  top: 25.892857142857146%;
+  z-index: 0;
+
+
+}
+.box-5 p:nth-of-type(4){
+  width: 66.5625%;
+  height: 42.26190476190476%;
+  left: 16.5625%;
+  top: 28.968253968253972%;
+  z-index: 0;
+}
+.box-5 p:nth-of-type(5){
+  width: 29.062500000000004%;
+  height: 27.579365079365083%;
+  left: 51.09375000000001%;
+  top: 42.46031746031746%;
+  z-index: 0;
+}
+.box-5 p:nth-of-type(6){
+  width: 29.062500000000004%;
+  height: 27.579365079365083%;
+  left: 19.21875%;
+  top: 42.26190476190476%;
+  z-index: 0;
+
+}
+.box-5 p:nth-of-type(7){
+  width: 46.17784711388456%;
+  height: 3.565856919991086%;
+  left: 26.875%;
+  top: 31.0546875%;
+  z-index: 0;
+
+}
+.box-5 p:nth-of-type(8){
+  width: 58.12500000000001%;
+  height: auto;
+  left: 20.9375%;
+  top: 37.00396825396825%;
+  z-index: 0;
+
+}
+.box-6 p:nth-of-type(1){
+  width: 106.5625%;
+  height: 100.59523809523809%;
+  left: -2.96875%;
+  top: -0.1984126984126984%;
+  z-index: 0;
+
+}
+.box-6 p:nth-of-type(2){
+  width: 86.5625%;
+  height: 34.12698412698413%;
+  left: 10.46875%;
+  top: 61.70634920634921%;
+  z-index: 0;
+
+
+}
+.box-6 p:nth-of-type(3){
+  width: 81.875%;
+  height: 30.555555555555557%;
+  left: 13.28125%;
+  top: 63.49206349206349%;
+  z-index: 0;
+}
+.box-6 p:nth-of-type(4){
+  width: 29.375%;
+  height: 27.77777777777778%;
+  left: 52.81249999999999%;
+  top: 64.58333333333334%;
+  z-index: 0;
+}
+.box-6 p:nth-of-type(5){
+  width: 37.1875%;
+  height: 2.976190476190476%;
+  left: 2.96875%;
+  top: 63.49206349206349%;
+  z-index: 0;
+
+}
+.box-6 p:nth-of-type(6){
+  width: 29.375%;
+  height: auto;
+  left: 16.09375%;
+  top: 68.25396825396825%;
+  z-index: 0;
+}
+.box-7 p:nth-of-type(1){
+  width: 106.5625%;
+  height: 100.39682539682539%;
+  left: -6.09375%;
+  top: -0.1984126984126984%;
+  z-index: 0;
+}
+.box-7 p:nth-of-type(2){
+  width: 100%;
+  height: 12.876705544412253%;
+  left: 0%;
+  top: 55.82361389693683%;
+  z-index: 0;
+  -webkit-animation: fadeIn 1s 1s 1 both;
+  -moz-animation: fadeIn 1s 1s 1 both;
+  animation: fadeIn 1s 1s 1 both;
+}
+.box-7 p:nth-of-type(3){
+  width: 38.68954758190328%;
+  height: 12.876705544412253%;
+  left: 61.31045241809673%;
+  top: 37.89527771587054%;
+  z-index: 0;
+
+}
+.box-7 p:nth-of-type(4){
+  width: 38.68954758190328%;
+  height: 12.876705544412253%;
+  left: 0%;
+  top: 74.24720798355744%;
+  z-index: 0;
+
+}
+.box-7 p:nth-of-type(5){
+  width: 29.375%;
+  height: 27.579365079365083%;
+  left: 66.92667706708268%;
+  top: 39.28199985142263%;
+  z-index: 0;
+
+}
+.box-7 p:nth-of-type(6){
+  width: 29.375%;
+  height: 27.579365079365083%;
+  left: 35.56942277691108%;
+  top: 48.394745313622074%;
+  z-index: 0;
+
+
+}
+.box-7 p:nth-of-type(7){
+  width: 29.375%;
+  height: 27.579365079365083%;
+  left: 3.2761310452418106%;
+  top: 57.60654235693238%;
+  z-index: 0;
+
+}
+.box-7 p:nth-of-type(8){
+  width: 41.875%;
+  height: 3.571428571428571%;
+  left: 3.28125%;
+  top: 2.7777777777777777%;
+  z-index: 0;
+
+
+
+}
+.box-7 p:nth-of-type(9){
+  width: 29.375%;
+  height: auto;
+  left: 7.968749999999999%;
+  top: 8.134920634920634%;
+  z-index: 0;
+
+
+}
+.box-8 p:nth-of-type(1){
+  width: 120.93750000000001%;
+  height: 100.39682539682539%;
+  left: -10.46875%;
+  top: 0%;
+  z-index: 0;
+}
+.box-8 p:nth-of-type(2){
+  width: 89.0625%;
+  height: 53.37301587301587%;
+  left: 5.46875%;
+  top: 2.7777777777777777%;
+  z-index: 0;
+
+}
+.box-8 p:nth-of-type(3){
+  width: 40.625%;
+  height: 38.095238095238095%;
+  left: 51.24122464898596%;
+  top: 16.279141865079367%;
+  z-index: 0;
+
+}
+.box-8 p:nth-of-type(4){
+  width: 40.625%;
+  height: 38.095238095238095%;
+  left: 8.42872464898596%;
+  top: 16.279141865079367%;
+  z-index: 0;
+}
+.box-8 p:nth-of-type(5){
+  width: 40.625%;
+  height: 38.095238095238095%;
+  left: 53.59374999999999%;
+  top: 58.13492063492064%;
+  z-index: 0;
+}
+.box-8 p:nth-of-type(6){
+  width: 40.625%;
+  height: 38.095238095238095%;
+  left: 5.61622464898596%;
+  top: 58.13492063492064%;
+  z-index: 0;
+}
+.box-8 p:nth-of-type(7){
+  width: 39.157566302652114%;
+  height: 24.861946858826737%;
+  left: 30.42121684867395%;
+  top: 41.997560854815156%;
+  z-index: 0;
+  animation: b 100s linear infinite;
+}
+@keyframes b {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+.box-8 p:nth-of-type(8){
+  width: 34.3213728549142%;
+  height: 21.89039942550083%;
+  left: 32.761310452418094%;
+  top: 43.4833345714781%;
+  z-index: 0;
+
+}
+
+.box-8 p:nth-of-type(9){
+  width: 41.875%;
+  height: 3.571428571428571%;
+  left: 29.323810452418098%;
+  top: 6.547619047619048%;
+  z-index: 0;
+}
+.box-8 p:nth-of-type(10){
+  width: 26.25%;
+  height: 15.476190476190476%;
+  left: 36.5625%;
+  top: 46.85867196592627%;
+  z-index: 0;
+  animation: a 100s linear infinite;
+}
+
+@keyframes a {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+.box-8 p:nth-of-type(11){
+  width: 29.375%;
+  height: auto;
+  left: 10.15625%;
+  top: 11.706349206349206%;
+  z-index: 0;
+}
+
